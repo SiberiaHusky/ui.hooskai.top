@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1">
+        <title>Documentation - Welt UI</title>
+        <link rel="icon" href="//ui.hooskai.top/img/favicon.png">
+        <!-- Description -->
+        <meta name="description" content="Connecting a Wider World">
+        <!-- Keywords -->
+        <meta name="keywords" content="胡斯凯,胡斯凱,hooskai,siberia husky,SiberiaHusky">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <!-- Style -->
+        <link href="//ui.hooskai.top/assets/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- nav bar -->
+        <nav class="blur us-n">
+            <div style="margin: 24px; vertical-align: text-bottom;">
+                <p class="dp-ib fs-xl">Docs</p>
+                <a href="/"><p class="dp-ib fs-l" style="margin-left: 8px;"><img src="../assets/img/Logo_White.png" style="height: 14px;"></p></a>
+            </div>
+        </nav>
+
+        <!-- tips -->
+        <div class="us-n" style="display: flex; justify-content: center; background-color: rgba(255, 255, 255, 0.05);">
+            <div class="marquee" style="padding: 8px;"><p>"Welt" is mean "World" in German.</p></div>
+        </div>
+
+        <!-- contents -->
+        <div style="margin: 32px; margin-bottom: 128px;">
+            <!-- buttons -->
+            <div class="dp-f us-n" id="buttons" style="margin-bottom: 16px;">
+                <h1 class="fs-xxl" style="margin-right: 8px; color: rgba(255, 255, 255, 0.25);">#</h1>
+                <h1 class="fs-xxl">Buttons</h1>
+            </div>
+
+            <div class="buttons dp-f us-n" style="text-align: center;">
+                <ul>
+                    <li><a title="Main button"><button class="main-button dp-ib"><h2>Main button</h2></button></a></li>
+                    <li><a title="Normal button"><button class="dp-ib"><h2>Normal button</h2></button></a></li>
+                </ul>
+            </div>
+
+            <p class="code" style="margin-top: 16px;">
+                <code>
+                    &lt;<code-e>button</code-e> <code-pn>class</code-pn>=<code-p>"main-button"</code-p>&gt;<code-w>Main button</code-w>&lt;/<code-e>button</code-e>&gt;<br>
+                </code>
+            </p>
+
+            <p class="code" style="margin-top: 16px;">
+                <code>
+                    &lt;<code-e>button</code-e>&gt;<code-w>Normal button</code-w>&lt;/<code-e>button</code-e>&gt;<br>
+                </code>
+            </p>
+
+            <!-- switch -->
+            <div class="dp-f us-n" id="switch" style="margin-top: 64px; margin-bottom: 16px;">
+                <h1 class="fs-xxl" style="margin-right: 8px; color: rgba(255, 255, 255, 0.25);">#</h1>
+                <h1 class="fs-xxl" id="buttons">Switch</h1>
+            </div>
+
+            <switch>
+                <input type="checkbox" id="toggle-button">
+                <label for="toggle-button" class="button-label">
+                    <span class="circle"></span>
+                </label>
+            </switch>
+
+            <pre class="code" style="margin-top: 16px;"><!--
+                --><code><!--
+                    -->&lt;<code-e>switch</code-e>&gt;<br><!--
+                    --><span class="us-n">    </span>&lt;<code-e>input</code-e> <code-pn>type</code-pn>=<code-p>"checkbox"</code-p> <code-pn>id</code-pn>=<code-p>"toggle-button"</code-p>&gt;<br><!--
+                    --><span class="us-n">        </span>&lt;<code-e>label</code-e> <code-pn>for</code-pn>=<code-p>"toggle-button"</code-p> <code-pn>class</code-pn>=<code-p>"button-label"</code-p>&gt;<br><!--
+                    --><span class="us-n">        </span>&lt;<code-e>span</code-e> <code-pn>class</code-pn>=<code-p>"circle"</code-p>&gt;&lt;/<code-e>span</code-e>&gt;<br><!--
+                    --><span class="us-n">    </span>&lt;/<code-e>label</code-e>&gt;<br><!--
+                    -->&lt;/<code-e>switch</code-e>&gt;<!--
+                --></code><!--
+            --></pre>
+
+            <!-- HTML native elements -->
+            <div class="dp-f us-n" id="html" style="margin-top: 64px; margin-bottom: 16px;">
+                <h1 class="fs-xxl" style="margin-right: 8px; color: rgba(255, 255, 255, 0.25);">#</h1>
+                <h1 class="fs-xxl" id="buttons">HTML native elements</h1>
+            </div>
+
+            <p>
+                Regular HTML native elements are already customized and can be written as normal HTML pages (the elements in this list can be used directly as element names).
+            </p>
+
+            <div class="show-card dp-f of-x-a" style="margin-top: 24px;">
+                <!-- abbr -->
+                <p class="abbr dp-ib" title="Abbrreviation">Abbr.</p>
+                <p class="dp-ib">abbr</p>
+            </div>
+
+            <div class="show-card dp-f of-x-a" style="margin-top: 16px;">
+                <!-- bold -->
+                <p class="dp-ib">Bold</p>
+                <p class="dp-ib">b, bold and strong</p>
+            </div>
+            
+            <div class="show-card dp-f of-x-a" style="margin-top: 16px;">
+                <!-- italic -->
+                <p class="i dp-ib">Italic</p>
+                <p class="dp-ib">i and italic</p>
+            </div>
+
+            <div class="show-card dp-f of-x-a" style="margin-top: 16px;">
+                <!-- strikethrough -->
+                <p class="s dp-ib">Strikethrough</p>
+                <p class="dp-ib">st, s, lt and strike</p>
+            </div>
+
+            <div class="show-card dp-f of-x-a" style="margin-top: 16px;">
+                <!-- overline -->
+                <p class="ol dp-ib">Overline</p>
+                <p class="dp-ib">overline and ol</p>
+            </div>
+
+            <div class="show-card dp-f of-x-a" style="margin-top: 16px;">
+                <!-- underline -->
+                <underline><p>Underline</p></underline>
+                <p class="dp-ib">underline and ul<br><span class="i" style="color: rgba(255, 255, 255, 0.5);">Note: ul is not supported as an element name because it conflicts with HTML native element.</span></p>
+            </div>
+
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <hr>
+
+            <div style="margin: 32px; margin-bottom: 0;">
+                Copyrights &copy; 2019-2023 <a href="/">SiberiaHusky</a>. All rights reserved.
+            </div>
+            <ul class="us-n" style="display: flex; margin: 32px; margin-top: 16px;">
+                <li><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" title="CC BY-SA 4.0 DEED"><i class="fa-brands fa-creative-commons"></i> <i class="fa-brands fa-creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa"></i><i class="fa-solid fa-arrow-up-right-from-square" id="icon-left"></i></a></li>
+                <li><a href="https://ui.hooskai.top/" title="Made by SiberiaHusky with Welt UI and Love"><img src="//ui,hooskai.top/assets/img/Logo_White.png" style="height: 12px;"><i class="fa-solid fa-arrow-up-right-from-square" id="icon-left"></i></a></li>
+            </ul>
+        </footer>
+    </body>
+
+    <script>
+        
+    </script>
+</html>

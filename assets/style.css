@@ -1,0 +1,610 @@
+:root {
+    font-family: BlinkMacSystemFont, PingFang SC, Microsoft YaHei, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, Arial, sans-serif;
+
+    /** root **/
+    --main_color: #1e86dd;
+    --main_color_rgb: 30, 134, 221;
+}
+
+::selection {
+    background-color: var(--main_color);
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+body, p, a, h1, h2, h3, h4, h5, h6, ul, li, div, pre, code {
+    margin: 0;
+    padding: 0;
+    font-family: BlinkMacSystemFont, PingFang SC, Microsoft YaHei, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: white;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, code {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#icon-left {
+    margin-left: 8px;
+}
+
+#icon-right {
+    margin-right: 8px;
+}
+
+/** button switch **/
+switch {
+    width: 50px;
+    height: 25px;
+}
+
+#toggle-button{ 
+    display: none; 
+}
+
+.button-label{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.button-label .circle{
+    transition: 0.25s;
+}
+
+#toggle-button:checked + label.button-label .circle{
+    left: 25px;
+}
+
+#toggle-button:checked + label.button-label{
+    background-color: var(--main_color);
+}
+
+/** button **/
+.buttons ul li:not(:last-child)::after, .buttons ul li:not(:last-child) {
+    border: none;
+    content: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px;
+    border: 0;
+}
+
+.buttons ul a {
+    content: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: none;
+}
+
+.buttons ul a:hover {
+    border: 0;
+    transition: .25s;
+}
+
+button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 0;
+    border-radius: 1000px;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    background-color: rgba(var(--main_color_rgb), 0.85);
+    -webkit-filter: drop-shadow(0 0 8px var(--main_color));
+    filter: drop-shadow(0 0 8px var(--main_color));
+    color: white;
+    transition: .25s;
+}
+
+button a, button p, button h1, button h2, button h3, button h4, button h5, button h6 {
+    color: black;
+    transition: .25s;
+}
+
+button:hover a, button:hover p, button:hover h1, button:hover h2, button:hover h3, button:hover h4, button:hover h5, button:hover h6 {
+    color: white;
+    transition: .25s;
+}
+
+/** main button **/
+.main-button {
+    background-color: var(--main_color);
+}
+
+.main-button a, .main-button p, .main-button h1, .main-button h2, .main-button h3, .main-button h4, .main-button h5, .main-button h6 {
+    color: white;
+}
+
+.main-button:hover {
+    background-color: rgba(var(--main_color_rgb), 0.85);
+}
+
+/** code **/
+.code {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+code {
+    color: #757575;
+}
+
+code .white, code-w {
+    color: white;
+}
+
+code .element, code-e {
+    color: #0091EA;
+}
+
+code .property-name, code-pn {
+    color: #4FC3F7;
+}
+
+code .property, code-p {
+    color: #FF8A65;
+}
+
+/** copy **/
+.copy {
+    color: white;
+    transition: .25s;
+}
+
+.copy:hover {
+    color: var(--main_color);
+    transition: .25s;
+}
+
+/** show-card **/
+.show-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+}
+
+.show-card p {
+    padding: 16px;
+}
+
+/** abbr **/
+abbr, .abbr {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: 1px dotted white;
+}
+
+/** bold **/
+bold, b, strong, .bold, .b, .strong {
+    font-weight: 900;
+}
+
+/** italic **/
+italic, i, .italic, .i {
+    font-style: italic;
+}
+
+/** strikethrough **/
+st, s, strike, lt, .st, .s, .strike, .lt {
+    text-decoration:line-through;
+}
+
+/** overline **/
+overline, ol, .overline, .ol {
+    border-top: 1px solid white;
+}
+
+/** underline **/
+underline, .underline, .ul {
+    border-bottom: 1px solid white;
+}
+
+/** blur **/
+.blur {
+    position: relative;
+    backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(64px);
+}
+
+/** user-select **/
+.us-n {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/** display **/
+.dp-f {
+    display: flex;
+}
+
+.dp-ib {
+    display: inline-block;
+}
+
+/** font-size **/
+.fs-xxsm, .tx-xxsm, .fs-xxs, .tx-xxs  {
+    font-size: xx-small;
+}
+
+.fs-xsm, .tx-xsm, .fs-xs, .tx-xs {
+    font-size: x-small;
+}
+
+.fs-smr, .ts-smr {
+    font-size: smaller;
+}
+
+.fs-sm, .ts-sm, .fs-s, .ts-s {
+    font-size: small;
+}
+
+.fs-m, .ts-m {
+    font-size: medium;
+}
+
+.fs-l, .ts-l {
+    font-size: large;
+}
+
+.fs-lr, .ts-lr {
+    font-size: larger;
+}
+
+.fs-xl, .ts-xl {
+    font-size: x-large;
+}
+
+.fs-xxl, .ts-xxl {
+    font-size: xx-large;
+}
+
+/** font-weight **/
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-b {
+    font-weight: bold;
+}
+
+.fw-br {
+    font-weight: bolder;
+}
+
+/** text-transform **/
+.tt-l {
+    text-transform: lowercase;
+}
+
+.tt-c {
+    text-transform: capitalize;
+}
+
+.tt-n {
+    text-transform: none;
+}
+
+.tt-u {
+    text-transform: uppercase;
+}
+
+/** overflow **/
+.of-a {
+    overflow: auto;
+}
+
+.of-h {
+    overflow: hidden;
+}
+
+.of-s {
+    overflow: scroll;
+}
+
+.of-v {
+    overflow: visible;
+}
+
+.of-x-a {
+    overflow-x: auto;
+}
+
+.of-x-h {
+    overflow-x: hidden;
+}
+
+.of-x-s {
+    overflow-x: scroll;
+}
+
+.of-x-v {
+    overflow-x: visible;
+}
+.of-y-a {
+    overflow-y: auto;
+}
+
+.of-y-h {
+    overflow-y: hidden;
+}
+
+.of-y-s {
+    overflow-y: scroll;
+}
+
+.of-y-v {
+    overflow-y: visible;
+}
+
+.marquee {
+    width: 100%;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/** nav bar **/
+nav {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5));
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/** censord **/
+#censord {
+    display: inline-block;
+    background-color: white;
+    color: white;
+    transition: .25s;
+}
+
+#censord:hover {
+    color: black;
+    transition: .25s;
+}
+
+#censord::selection {
+    color: white;
+}
+
+#fake-censord {
+    display: inline-block;
+    background-color: white;
+    color: white;
+}
+
+#fake-censord::selection {
+    color: white;
+}
+
+
+/** list **/
+ul {
+    color: white;
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    padding: 12px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    transition: .25s;
+}
+
+ul li a:hover {
+    border-bottom: 1px solid white;
+    transition: .25s;
+}
+
+ul li:not(:last-child)::after {
+    content: '\\';
+    margin-left: 16px;
+    margin-right: 16px;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.list2 a {
+    padding: 0;
+    border-bottom: 0;
+    text-decoration: none;
+    background: linear-gradient(to left, transparent, var(--main_color)) no-repeat left bottom;
+    background-size: 0 2px;
+    transition: .6s;
+}
+
+.list2 a:hover {
+    border-bottom: 0;
+    background-position-x: left;
+    background-size: 100% 2px;
+}
+
+/** friends links **/
+.friends-links a {
+    padding: 0;
+    border-bottom: 0;
+}
+
+.friends-links div {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: .25s;
+}
+
+.friends-links div:hover {
+    background-color: #1e86dd;
+    transition: .25s;
+}
+
+/** cover **/
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black 90%);
+}
+
+/** footer **/
+footer hr {
+    border: 0;
+    height: 1px;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: .25s;
+}
+
+footer img {
+    opacity: 0.5;
+    transition: .25s;
+}
+
+footer a:hover {
+    color: white;
+    transition: .25s;
+}
+
+footer a:hover img, footer img:hover {
+    opacity: 1;
+    transition: .25s;
+}
+
+footer ul {
+    color: white;
+    list-style-type: none;
+}
+
+footer ul li:not(:last-child) {
+    display: inline;
+}
+
+footer ul li a {
+    padding: 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    transition: .25s;
+}
+
+footer ul li a:hover {
+    color: white;
+    border-bottom: none;
+    transition: .25s;
+}
+
+ul li:not(:last-child)::after {
+    content: '\\';
+    margin: 16px;
+    color: rgba(255, 255, 255, 0.25);
+}
